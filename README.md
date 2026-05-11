@@ -2,7 +2,6 @@
 
 Exploratory analysis of US tech stocks (AAPL, MSFT, NVDA, META, GOOGL) and SPY benchmark. Built to practice using NumPy, pandas, and matplotlib and develop intuition for risk-adjusted returns before moving into strategy backtesting.
 
----
 
 ## Key Findings
 
@@ -10,7 +9,6 @@ Exploratory analysis of US tech stocks (AAPL, MSFT, NVDA, META, GOOGL) and SPY b
 - 
 - 
 
----
 
 ## Project Structure
 
@@ -19,7 +17,6 @@ notebooks/
   02_statistical_analysis.ipynb # Correlation matrix, volatility ranking
   03_portfolio_simulator.ipynb  # Sharpe Ratio, momentum strategy
 
----
 
 ## Methods
 
@@ -29,7 +26,6 @@ notebooks/
   (risk-free rate = 4.5%, approximate 2024 T-bill rate)
 - Momentum strategy: rank by trailing 12-month return, rebalance monthly
 
----
 
 ## How to Run
 
