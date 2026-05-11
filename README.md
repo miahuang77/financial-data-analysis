@@ -10,9 +10,8 @@ Exploratory analysis of US tech stocks (AAPL, MSFT, NVDA, META, GOOGL) and SPY b
 - 
 
 
-## Project Structure
+## Project Structur
 
-notebooks/
   01_data_acquisition.ipynb 
   
   02_statistical_analysis.ipynb 
