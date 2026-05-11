@@ -13,10 +13,12 @@ Exploratory analysis of US tech stocks (AAPL, MSFT, NVDA, META, GOOGL) and SPY b
 ## Project Structure
 
 notebooks/
-  01_data_acquisition.ipynb     # Price data, returns, moving averages
-  02_statistical_analysis.ipynb # Correlation matrix, volatility ranking
-  03_portfolio_simulator.ipynb  # Sharpe Ratio, momentum strategy
-
+  01_data_acquisition.ipynb 
+  
+  02_statistical_analysis.ipynb 
+  
+  03_portfolio_simulator.ipynb 
+  
 
 ## Methods
 
