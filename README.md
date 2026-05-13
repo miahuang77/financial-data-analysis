@@ -1,13 +1,14 @@
 # Financial Data Analysis
 
-Exploratory analysis of US tech stocks (AAPL, MSFT, NVDA, META, GOOGL) and SPY benchmark. Built to practice using NumPy, pandas, and matplotlib and develop intuition for risk-adjusted returns before moving into strategy backtesting.
+Exploratory analysis of US tech stocks (AAPL, MSFT, NVDA, META, GOOGL) and SPY benchmark. Built to practice using NumPy, pandas, and matplotlib and as a revision for COMM 191 and COMM 298.
+The project was developed as a foundation for later work in stochastic modelling and backtesting systems.
 
 
 ## Key Findings
 
 - NVDA delivered the highest return over the period but carried 2.6x the volatility of SPY
-- 
-- 
+- Returns are not normally distributed. Shapiro-Wilk test rejected normality for all tickers (p < 0.05); QQ plots confirm fat tails. Risk models assuming normality will systematically underestimate extreme events
+- Momentum strategy outperformed SPY by 23.5% annually, meaning that momentum-based portfolio allocation outperformed equal-weight, but at the cost of 2x the volatility and -41.9% max drawdown vs SPY's -24.5%.
 
 
 ## Project Structur
