@@ -36,8 +36,6 @@ Assets currently include: SPY, AAPL, MSFT, NVDA, META, GOOGL
   
 ### Statistical Analysis
 
-Implemented analyses include:
-
 - Daily returns
 - Annualized returns
 - Volatility
@@ -59,6 +57,16 @@ Implemented risk metrics include:
 - Rolling volatility
 - Cumulative returns
 
+### Portfolio Construciton
+
+- Construct equal-weight portfolios from selected assets
+- Compute daily and cumulative portfolio returns
+- Compare portfolio performance against individual assets
+- Calculate annualized portfolio return and volatility
+- Measure portfolio Maximum Drawdown (MDD)
+- Visualize wealth index growth over time
+- Evaluate diversification effects through portfolio risk reduction
+
 ## Project Structure
 
   01_data_acquisition.ipynb 
@@ -74,21 +82,7 @@ Implemented risk metrics include:
 
 The project follows the following research pipeline:
 
-Raw Market Data
-        ↓
-Data Cleaning
-        ↓
-Return Calculation
-        ↓
-Exploratory Analysis
-        ↓
-Distribution Testing
-        ↓
-Risk Measurement
-        ↓
-Portfolio Analysis
-        ↓
-Factor Validation
+Raw Market Data --> Data Cleaning --> Return Calculation -->  Exploratory Analysis  -->  Distribution Testing  -->  Risk Measurement  -->  Portfolio Analysis  -->  Factor Validation
 
 ## How to Run
 
