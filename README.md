@@ -1,33 +1,94 @@
 # Financial Data Analysis
+### A quantitative research project for portfolio risk analysis and factor investing
 
-Exploratory analysis of US tech stocks (AAPL, MSFT, NVDA, META, GOOGL) and SPY benchmark. Built to practice using NumPy, pandas, and matplotlib and as a revision for COMM 191 and COMM 298.
-The project was developed as a foundation for later work in stochastic modelling and backtesting systems.
+---
 
+## Overview and Research Objectives
 
-## Key Findings
+The goal of this project is to understand **how financial data behaves**, evaluate **risk**, and build reusable research pipelines.
 
-- NVDA delivered the highest return over the period but carried 2.6x the volatility of SPY
-- Returns are not normally distributed. Shapiro-Wilk test rejected normality for all tickers (p < 0.05); QQ plots confirm fat tails. Risk models assuming normality will systematically underestimate extreme events
-- Momentum strategy outperformed SPY by 23.5% annually, meaning that momentum-based portfolio allocation outperformed equal-weight, but at the cost of 2x the volatility and -41.9% max drawdown vs SPY's -24.5%.
+Current objectives include:
 
+- Analyze return distributions of major US equities
+- Measure portfolio and asset tail risk
+- Build reusable financial data pipelines
+- Develop production-quality research code
 
-## Project Structur
+Long-term objectives:
+
+- Multi-factor investing
+- Factor validation (Fama-MacBeth)
+- Portfolio optimization
+- Backtesting framework
+
+---
+
+## Features
+
+### Data Pipeline
+
+- Automatic historical data download
+- Data cleaning
+- Missing value handling
+- Reproducible datasets
+
+Assets currently include: SPY, AAPL, MSFT, NVDA, META, GOOGL
+  
+### Statistical Analysis
+
+Implemented analyses include:
+
+- Daily returns
+- Annualized returns
+- Volatility
+- Rolling volatility
+- Moving averages
+- Distribution visualization
+- Q-Q plots
+- Skewness
+- Kurtosis
+- Shapiro-Wilk normality testing
+
+### Risk Analytics
+
+Implemented risk metrics include:
+
+- Historical Value-at-Risk (VaR)
+- Conditional Value-at-Risk (CVaR)
+- Maximum Drawdown
+- Rolling volatility
+- Cumulative returns
+
+## Project Structure
 
   01_data_acquisition.ipynb 
   
-  02_statistical_analysis.ipynb 
+  02_descriptive_statistics.ipynb 
   
-  03_portfolio_simulator.ipynb 
+  03_distribution_and_tail_risk.ipynb 
+
+  04_portfolio_construction.ipynb
   
 
-## Methods
+## Methodology
 
-- Data: yfinance, daily prices 2020–2025
-- Metrics: daily return, 20-day rolling volatility, 50/200-day Moving Average
-- Portfolio evaluation: weighted return, portfolio variance, Sharpe Ratio
-  (risk-free rate = 4.5%, approximate 2024 T-bill rate)
-- Momentum strategy: rank by trailing 12-month return, rebalance monthly
+The project follows the following research pipeline:
 
+Raw Market Data
+        ↓
+Data Cleaning
+        ↓
+Return Calculation
+        ↓
+Exploratory Analysis
+        ↓
+Distribution Testing
+        ↓
+Risk Measurement
+        ↓
+Portfolio Analysis
+        ↓
+Factor Validation
 
 ## How to Run
 
