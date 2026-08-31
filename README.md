@@ -7,7 +7,7 @@
 
 This project analyzes the return behavior of major US equities, measures tail risk, and backtests systematic portfolio construction strategies against a passive SPY benchmark.
 
-**Assets:** AAPL, MSFT, NVDA, META, GOOGL, SPY
+**Assets:** AAPL, MSFT, NVDA, META, GOOGL, SPY  
 **Period:** 2020-01-01 to 2025-12-31 (1,506 trading days)
 
 Current objectives include:
