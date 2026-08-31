@@ -49,10 +49,10 @@ Long-term objectives:
 - Conditional Value-at-Risk (CVaR)
 - Maximum Drawdown
 
-### Portfolio Construciton
+### Portfolio Construction
 
 - Interactive portfolio calculator
-- Efficient frontier via 10,000-run Monte Carlo simulation (Dirichlet-sampled weights); identifies Max Sharpe and Min Volatility portfolios
+- Efficient frontier via 10,000-times Monte Carlo simulations (Dirichlet-sampled weights); identifies Max Sharpe and Min Volatility portfolios
 - Backtests three monthly-rebalanced strategies against SPY: equal-weight, momentum-weight (negative-momentum assets get zero weight), and volatility-inverse weight
 - Reports annualized return, volatility, Sharpe, max drawdown, and win rate per strategy
 
