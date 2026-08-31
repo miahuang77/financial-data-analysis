@@ -5,7 +5,10 @@
 
 ## Overview and Research Objectives
 
-The goal of this project is to understand **how financial data behaves**, evaluate **risk**, and build reusable research pipelines.
+This project analyzes the return behavior of major US equities, measures tail risk, and backtests systematic portfolio construction strategies against a passive SPY benchmark.
+
+**Assets:** AAPL, MSFT, NVDA, META, GOOGL, SPY
+**Period:** 2020-01-01 to 2025-12-31 (1,506 trading days)
 
 Current objectives include:
 
@@ -17,9 +20,8 @@ Current objectives include:
 Long-term objectives:
 
 - Multi-factor investing
-- Factor validation (Fama-MacBeth)
+- Factor validation
 - Portfolio optimization
-- Backtesting framework
 
 ---
 
@@ -31,41 +33,29 @@ Long-term objectives:
 - Data cleaning
 - Missing value handling
 - Reproducible datasets
-
-Assets currently include: SPY, AAPL, MSFT, NVDA, META, GOOGL
   
 ### Statistical Analysis
 
-- Daily returns
-- Annualized returns
-- Volatility
-- Rolling volatility
-- Moving averages
-- Distribution visualization
+- Daily and annualized returns, annualized volatility, Sharpe ratio (risk_free_rate = 4.5%)  
+- Covariance and correlation matrices
+- One-sample and two-sample t-tests on mean daily returns
+
+### Distribution and Risk Analytics
+
+- Distribution visualization, skewness, kurtosis
 - Q-Q plots
-- Skewness
-- Kurtosis
 - Shapiro-Wilk normality testing
-
-### Risk Analytics
-
-Implemented risk metrics include:
-
 - Historical Value-at-Risk (VaR)
 - Conditional Value-at-Risk (CVaR)
 - Maximum Drawdown
-- Rolling volatility
-- Cumulative returns
 
 ### Portfolio Construciton
 
-- Construct equal-weight portfolios from selected assets
-- Compute daily and cumulative portfolio returns
-- Compare portfolio performance against individual assets
-- Calculate annualized portfolio return and volatility
-- Measure portfolio Maximum Drawdown (MDD)
-- Visualize wealth index growth over time
-- Evaluate diversification effects through portfolio risk reduction
+- Interactive portfolio calculator
+- Efficient frontier via 10,000-run Monte Carlo simulation (Dirichlet-sampled weights); identifies Max Sharpe and Min Volatility portfolios
+- Backtests three monthly-rebalanced strategies against SPY: equal-weight, momentum-weight (negative-momentum assets get zero weight), and volatility-inverse weight
+- Reports annualized return, volatility, Sharpe, max drawdown, and win rate per strategy
+
 
 ## Project Structure
 
@@ -82,8 +72,14 @@ Implemented risk metrics include:
 
 The project follows the following research pipeline:
 
-Raw Market Data --> Data Cleaning --> Return Calculation -->  Exploratory Analysis  -->  Distribution Testing  -->  Risk Measurement  -->  Portfolio Analysis  -->  Factor Validation
+Raw Market Data --> Data Cleaning --> Return Calculation -->  Exploratory Analysis  -->  Distribution Testing  -->  Risk Analysis  -->  Portfolio Analysis
 
 ## How to Run
 
-pip install -r requirements.txt
+Install dependencies:
+
+pip install pandas numpy matplotlib seaborn scipy yfinance ipywidgets jupyter
+
+Then run notebooks in order (01 → 04) — each depends on data/prices_clean.csv produced by notebook 01:
+
+jupyter notebook
